@@ -1,0 +1,27 @@
+{
+  "name": "uzdsmi-nf.uz-v2",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.9.0",
+    "@nuxtjs/axios": "^5.12.2",
+    "@tailwindcss/typography": "^0.2.0",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6",
+    "nuxt-i18n": "^6.15.4",
+    "swiper": "5.4.5",
+    "v-calendar": "^2.1.1",
+    "vue-awesome-swiper": "^4.1.1",
+    "vuesax": "^4.0.1-alpha.25"
+  },
+  "devDependencies": {
+    "@nuxtjs/date-fns": "^1.4.3",
+    "@nuxtjs/tailwindcss": "^3.2.0"
+  }
+}

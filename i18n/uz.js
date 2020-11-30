@@ -1,0 +1,162 @@
+export default {
+  site_title: "O'zbekiston davlat san'at va madaniyat institutining Nukus filiali",
+  site_description: "O'zbekiston davlat san'at va madaniyat instituti Nukus filialining rasmiy veb-sayti",
+  common: {
+    an_error_occured: 'Xatolik yuz berdi',
+    page_not_found: 'Sahifa topilmadi',
+  },
+  iso: 'uz',
+  links: {
+    read_more: "Batafsil ko'rish",
+    read: "Batafsil o'qish",
+    download: "Faylni yuklash",
+  },
+  nav: {
+    home_page: 'Bosh sahifa',
+    // news
+    news: 'Yangiliklar',
+    // contacts
+    contacts: 'Aloqa',
+    // branch
+    branch: {
+      title: 'Filial',
+      charter: 'Filial nizomi',
+      history: 'Filial tarixi',
+      administration: 'Rahbariyat',
+      faculties: {
+        title: 'Fakultet',
+        directing_and_acting_skills: 'Rejissura va aktyor mahorati',
+        social_and_humanities_sciences: 'Ijtimoiy gumanitar fanlar',
+        texnogen: "Texnogen va dramaturgiya san'ati",
+        folk_art_culture: 'Xalq ijodiyoti, madaniyat va kutubxona faoliyati',
+      },
+      center_and_divisions: {
+        title: "Markaz va bo'limlar",
+        center_of_information_resource: 'Axborot resurs markazi',
+        center_of_information_technologies: 'Axborot texnologiyalari markazi',
+        department_of_international_relations: "Xalqaro aloqalar bo'limi",
+        department_of_monitoring_and_internal_control: "Monitoring va ichki nazorat bo'limi",
+        department_of_quality: "Ta'lim sifatini nazorat qilish bo'limi",
+        department_of_youth: "Ma'naviyat va ma'rifat yoshlar bilan ishlash bo'limi",
+        educational_and_methodical_activities: "O'quv-uslubiy bo'limi",
+        hr: "Kadrlar bo'limi",
+        legal_counsel: 'Yuriskonsult',
+        marketing: "Marketing xizmati bo'limi",
+        office_department: "Devonxona bo'limi",
+        press_secretary: 'Matbuot kotibi',
+        scientific_department: "Ilmiy bo'lim xatkeri",
+        scientific_innovative: 'Ilmiy innovatsion',
+        trade_union: 'Kasaba uyushmasi',
+        womens_committee: "Xotin-qizlar qo'mitasi",
+      },
+      vacancies: "Bo'sh ish o'rinlari",
+    },
+    // activity
+    activity: {
+      title: 'Faoliyat',
+      scientific_activity: 'Ilmiy faoliyat',
+      scientific_council: 'Ilmiy kengash',
+      collection_of_documents_on_scientific_research: "Ilmiy tadqiqotlarga oid hujjatlar to'plami",
+      financial_activity: 'Moliyaviy faoliyat',
+      alumni_monitoring: 'Bitiruvchilar monitoringi',
+      job_placement: 'Ishga joylashish',
+      marketing: 'Marketing',
+      sample_of_contracts: 'Shartnomalar namunasi',
+      culture_and_educational_activities: "Madaniyat va ta'lim faoliyati",
+      sports_events: 'Sport tadbirlari',
+      student_life: 'Talabalar hayoti',
+      youth_union: 'Yoshlar ittifoqi',
+    },
+    // applicants
+    applicants: {
+      title: 'Abiturientlar',
+      be_aware: "Xabardar bo'l",
+      notes_of_applicants: 'Abituriyentlarning eslatmalari',
+      privileges: 'Imtiyozlar',
+      admission_quota: 'Qabul kvotasi',
+      admission_to_distance_learning: "Masofaviy ta'limga kirish",
+      foreign_applicants: 'Xorijiy abiturientlarga',
+      admission_commission: 'Qabul komissiyasi',
+      admission_monitoring: 'Qabul monitoringi',
+      package_of_documents: "Hu'jjatlar to'plami",
+      list_of_exam_subjects: "Imtihon fanlari ro'yxati",
+      creative_exam_requirements: 'Ijodiy imtihon talablari va dasturlari',
+      test_exam_results: 'Test imtihoni natijalari',
+      creative_exam_results: 'Ijodiy imtihon natijalari',
+      statistics_of_passing_points: "O'tish ballari statistikasi",
+    },
+    // students
+    students: {
+      title: 'Talabalar',
+      instructions: "Ko'rsatmalar",
+      gifted_students: 'Iqtidorli talabalar',
+      class_schedul: 'Dars jadvali',
+      mastering: "O'zlashtirish",
+      attendance: 'Davomat',
+      protection_of_graduation_qualification_work: 'Bitiruv malakaviy ishini himoya qilish',
+    },
+    // interactive services
+    interactive_services: {
+      title: 'Interaktiv xizmatlar',
+      electronic_acceptance_of_applicants_applications: 'Abituriyentlarning murojaatlarini elektron qabul qilish',
+      get_a_student_certificate: "Talabalik haqida ma'lumotnoma olish",
+      higher_education_diploma_confirmation: "Oliy ma'lumot haqidagi diplomni tasdiqlash",
+      possibility_to_get_an_electronic_copy_of_the_diploma: 'Diplomning elektron nusxasini olish imkoniyati',
+      electronic_submission_of_articles_to_conferences_and_scientific_journals: 'Konferensiya va ilmiy jurnallarga maqolalarni elektron qabul qilish',
+      vacancies: 'Vakant lavozimlar',
+      sign_up_for_a_leaders_appointment: "Rahbar qabuliga yozilish",
+      determining_the_amount_of_payment_contract: "To'lov-kontrakt miqdorini aniqlash",
+      stratified_payment_contract: "Tabaqalashtirilgan to'lov-kontrakt asosida qo'shimcha qabul uchun ariza berish tizimi",
+    },
+    // normative-legal documents
+    normative_legal_documents: {
+      title: "Me'yoriy-Huquqiy hujjatlar",
+      presidential_decrees_and_resolutions: 'Prezident farmon va qarorlari',
+      government_decisions_and_programs: "Oliy ta'lim muassasasi tomonidan qabul qilingan normativ-huquqiy va ijro hujjatlari",
+      normative_legal_and_executive_documents: 'Normativ-huquqiy va ijro hujjatlari',
+    },
+  },
+  news: {
+    latest: 'Oxirgi yangiliklar',
+    description: "O'zbekiston davlat san'at va madaniyat institutining Nukus filialidagi so'nggi yangiliklar va dolzarb yangiliklar",
+    all: "Barcha yangiliklarni ko'rish",
+  },
+  announcements: {
+    latest: "Oxirgi e'lonlar",
+    description: "O'zbekiston davlat san'at va madaniyat institutining Nukus filialidagi so'nggi e'lonlar",
+    all: "Barcha e'lonlar",
+  },
+  articles: {
+    latest: 'Maqolalar',
+    description: '',
+    all: 'Barcha maqolalar'
+  },
+  conferences: {
+    latest: 'Konferenciyalar',
+    description: '',
+    all: 'Barcha konferenciyalar'
+  },
+
+  interactive_services: 'Interaktiv xizmatlar',
+  president_title: "O'zbekiston Respublikasi Prezidenti Shavkat Mirziyoyevning ijtimoiy tarmoqlardagi rasmiy sahifalari",
+  useful_resources: 'Foydali manbalar',
+  categories: "Bo'limlar",
+  information: 'Axborot',
+  address: {
+    title: 'Manzil',
+    place: "Qoraqalpog'iston ko'chasi, Nukus, O'zbekiston",
+  },
+  phone: 'Telefon',
+  sidebar: {
+    calendar: 'Kalendar',
+    national_flag: "O'zbekiston Respublikasining davlat bayrog'i",
+    national_symbolics: "O'zbekiston Respublikasining milliy ramzlari",
+    national_anthem: "O'zbekiston davlat madhiyasi",
+  },
+  post: {
+    published_date: 'Nashr qilingan sana',
+  },
+  page: 'Sahifa',
+  page_not_found: 'Sahifa mavjud emas',
+  an_error_occured: "Xato ro'y berdi",
+}
