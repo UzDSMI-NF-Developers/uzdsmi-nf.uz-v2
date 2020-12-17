@@ -82,7 +82,7 @@
       return {
         page: 1,
         max: 10,
-        postsUrl: `http://uzdsmi-nf/wp-json/wp/v2/posts?categories=2&_embed`,
+        postsUrl: `http://admin.uzdsmi-nf.uz//wp-json/wp/v2/posts?categories=2&_embed`,
         posts: [],
         postsData: {
           per_page: 10,
@@ -100,10 +100,13 @@
     },
     methods: {
       getPosts() {
+        const loading = this.$vs.loading()
         this.$axios.get(this.postsUrl, { params: this.postsData }).then((response) => {
+          loading.close()
           this.posts = response.data
           this.configPagination(response.headers)
         }).catch((error) => {
+          loading.close()
           console.log(error)
         })
       },

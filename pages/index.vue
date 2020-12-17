@@ -33,7 +33,7 @@ export default {
       .sortBy('date', 'desc')
       .fetch()
 
-    const wpNews = await $axios.$get(`http://uzdsmi-nf/wp-json/wp/v2/posts?categories=2&_embed&per_page=3`)
+    const wpNews = await $axios.$get(`http://admin.uzdsmi-nf.uz/wp-json/wp/v2/posts?categories=2&_embed&per_page=3`)
 
     return {
       announcements,
