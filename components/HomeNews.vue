@@ -15,15 +15,16 @@
         >
           <vs-card>
             <template #title>
-              <h3>{{ post.title }}</h3>
+              <h3 v-html="post.title.rendered"></h3>
             </template>
             <template #img>
-              <img :src="post.featuredImage" :alt="post.title" />
+              <img
+                :src="post._embedded['wp:featuredmedia']['0'].source_url"
+                :alt="post.title.rendered"
+              />
             </template>
             <template #text>
-              <p class="pb-4">
-                {{ post.description }}
-              </p>
+              <p class="pb-4" v-html="post.excerpt.rendered"></p>
               <vs-button
                 :to="'/news/' + post.id"
                 border

@@ -1,7 +1,7 @@
 <template>
   <main>
     <HomeSlider />
-    <HomeNews :posts="news" />
+    <HomeNews :posts="wpNews" />
     <HomeAnnouncements :posts="announcements" />
     <HomeArticles :posts="articles" />
     <HomeConferences :posts="conferences" />
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  async asyncData({ $content, app }) {
+  async asyncData({ $content, $axios, app }) {
     const { locale } = app.i18n
 
     const announcements = await $content(`${locale}/announcements`)
@@ -33,11 +33,14 @@ export default {
       .sortBy('date', 'desc')
       .fetch()
 
+    const wpNews = await $axios.$get(`http://uzdsmi-nf/wp-json/wp/v2/posts?categories=2&_embed&per_page=3`)
+
     return {
       announcements,
       news,
       articles,
       conferences,
+      wpNews
     }
   },
 }

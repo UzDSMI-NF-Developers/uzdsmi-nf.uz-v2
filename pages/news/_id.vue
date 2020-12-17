@@ -9,32 +9,40 @@
         </span>
       </p>
     </div>
-    <Content :body="post" />
+    <div
+      class="prose prose-sm lg:prose-lg xl:prose=xl nuxt-content max-w-none mt-10"
+    >
+      <h1 v-html="post.title.rendered"></h1>
+      <div v-html="post.content.rendered"></div>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
-    async asyncData ({ $content, params, app }) {
+    async asyncData ({ $axios, params, app }) {
       const { id } = params
       const { locale } = app.i18n
-      const post = await $content(`${locale}/news`, id).fetch()
+      const post = await $axios.$get(`http://uzdsmi-nf/wp-json/wp/v2/posts/${id}`)
+
+      console.log(id)
+      console.log(post)
 
       return {
         post
       }
     },
     head() {
-      const { title, description } = this.post
+      const { title, excerpt } = this.post
 
       return {
-        title: title,
+        title: title.rendered,
         titleTemplate: `%s | uzdsmi-nf.uz`,
         meta: [
           {
             hid: 'description',
             name: 'description',
-            content: description
+            content: excerpt.rendered
           }
         ]
       }

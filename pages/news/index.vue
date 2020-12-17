@@ -7,7 +7,7 @@
 
     <vs-row class="mb-6">
       <vs-col
-        v-for="post in $vs.getPage(news, page, max)"
+        v-for="post in posts"
         :key="post.id"
         w="6"
         xs="12"
@@ -15,15 +15,16 @@
       >
         <vs-card>
           <template #title>
-            <h3>{{ post.title }}</h3>
+            <h3 v-html="post.title.rendered"></h3>
           </template>
           <template #img>
-            <img :src="post.featuredImage" :alt="post.title" />
+            <img
+              :src="post._embedded['wp:featuredmedia']['0'].source_url"
+              :alt="post.title.rendered"
+            />
           </template>
           <template #text>
-            <p class="pb-4">
-              {{ post.description }}
-            </p>
+            <p class="pb-4" v-html="post.excerpt.rendered"></p>
             <p class="flex items-center pb-2">
               <img
                 :src="require('~/assets/svg/IconCalendar.svg')"
@@ -44,28 +45,19 @@
     </vs-row>
 
     <div class="flex items-center justify-center pt-8 pb-4">
-      <vs-pagination
-        v-model="page"
-        :length="$vs.getLength(news, max)"
-        only-arrows
-      />
       <code class="ml-4 rounded-lg bg-gray-200 p-2">
-        {{ $t('page') }}: <strong>{{ page }}</strong>
+        {{ $t('page') }}: <strong>{{ this.postsData.page }}</strong>
       </code>
+      <pagination :pagination="pagination"
+        @prev="--postsData.page; getPosts();"
+        @next="postsData.page++; getPosts();">
+      </pagination>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    async asyncData ({ $content, app }) {
-      const { locale } = app.i18n
-      const news = await $content(`${locale}/news`).sortBy('date', 'desc').fetch()
-
-      return {
-        news
-      }
-    },
     head() {
       const newsTitle = this.$i18n.t('news.latest')
       const newsDescription = this.$i18n.t('news.description')
@@ -83,10 +75,45 @@
       }
     },
     layout: 'page',
+    mounted() {
+      this.getPosts()
+    },
     data() {
       return {
         page: 1,
         max: 10,
+        postsUrl: `http://uzdsmi-nf/wp-json/wp/v2/posts?categories=2&_embed`,
+        posts: [],
+        postsData: {
+          per_page: 10,
+          page: 1
+        },
+        pagination: {
+          prevPage: '',
+          nextPage: '',
+          totalPages: '',
+          from: '',
+          to: '',
+          total: ''
+        }
+      }
+    },
+    methods: {
+      getPosts() {
+        this.$axios.get(this.postsUrl, { params: this.postsData }).then((response) => {
+          this.posts = response.data
+          this.configPagination(response.headers)
+        }).catch((error) => {
+          console.log(error)
+        })
+      },
+      configPagination(headers) {
+        this.pagination.total = +headers['x-wp-total'];
+        this.pagination.totalPages = +headers['x-wp-totalpages'];
+        this.pagination.from = this.pagination.total ? ((this.postsData.page - 1) * this.postsData.per_page) + 1 : ' ';
+        this.pagination.to = (this.postsData.page * this.postsData.per_page) > this.pagination.total ? this.pagination.total : this.postsData.page * this.postsData.per_page;
+        this.pagination.prevPage = this.postsData.page > 1 ? this.postsData.page : '';
+        this.pagination.nextPage = this.postsData.page < this.pagination.totalPages ? this.postsData.page + 1 : '';
       }
     }
   }
