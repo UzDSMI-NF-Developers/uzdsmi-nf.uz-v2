@@ -18,17 +18,11 @@
             />
             <div class="flex-grow">
               <h3 class="text-gray-900 title-font font-medium">
-                <NuxtLink
-                  :to="
-                    localePath(
-                      '/interactive-services/electronic-acceptance-of-applicants-applications',
-                    )
-                  "
-                >
+                <a href="http://ariza.uzdsmi-nf.uz/" target="_blank" rel="nofollow noopener">
                   {{
                     $t('nav.interactive_services.electronic_acceptance_of_applicants_applications')
                   }}
-                </NuxtLink>
+                </a>
               </h3>
             </div>
           </div>
@@ -43,7 +37,7 @@
             />
             <div class="flex-grow">
               <h3 class="text-gray-900 title-font font-medium">
-                <NuxtLink :to="localePath('/interactive-services/get-a-student-certificate')">
+                <NuxtLink :to="localePath('/student-information')">
                   {{ $t('nav.interactive_services.get_a_student_certificate') }}
                 </NuxtLink>
               </h3>
@@ -61,7 +55,7 @@
             <div class="flex-grow">
               <h3 class="text-gray-900 title-font font-medium">
                 <NuxtLink
-                  :to="localePath('/interactive-services/higher-education-diploma-confirmation')"
+                  :to="localePath('/diploma-confirmation')"
                 >
                   {{ $t('nav.interactive_services.higher_education_diploma_confirmation') }}
                 </NuxtLink>
@@ -127,7 +121,7 @@
             />
             <div class="flex-grow">
               <h3 class="text-gray-900 title-font font-medium">
-                <NuxtLink :to="localePath('/')">
+                <NuxtLink :to="localePath('/announcements/4')">
                   {{ $t('nav.interactive_services.vacancies') }}
                 </NuxtLink>
               </h3>
@@ -144,7 +138,7 @@
             />
             <div class="flex-grow">
               <h3 class="text-gray-900 title-font font-medium">
-                <NuxtLink :to="localePath('/')">
+                <NuxtLink :to="localePath('/online-reception')">
                   {{ $t('nav.interactive_services.sign_up_for_a_leaders_appointment') }}
                 </NuxtLink>
               </h3>
@@ -161,7 +155,7 @@
             />
             <div class="flex-grow">
               <h3 class="text-gray-900 title-font font-medium">
-                <NuxtLink :to="localePath('/')">
+                <NuxtLink :to="localePath('/check-contract')">
                   {{ $t('nav.interactive_services.determining_the_amount_of_payment_contract') }}
                 </NuxtLink>
               </h3>
