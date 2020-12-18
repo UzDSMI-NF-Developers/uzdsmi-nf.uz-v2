@@ -82,7 +82,7 @@
       return {
         page: 1,
         max: 10,
-        postsUrl: `http://admin.uzdsmi-nf.uz//wp-json/wp/v2/posts?categories=2&_embed`,
+        postsUrl: `https://admin.uzdsmi-nf.uz//wp-json/wp/v2/posts?categories=2&_embed`,
         posts: [],
         postsData: {
           per_page: 10,

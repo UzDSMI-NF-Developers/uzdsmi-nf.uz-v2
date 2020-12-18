@@ -20,10 +20,10 @@ export default {
       .limit(3)
       .sortBy('date', 'desc')
       .fetch()
-    const news = await $content(`${locale}/news`)
+    /*const news = await $content(`${locale}/news`)
       .limit(3)
       .sortBy('date', 'desc')
-      .fetch()
+      .fetch()*/
     const articles = await $content(`${locale}/articles`)
       .limit(2)
       .sortBy('date', 'desc')
@@ -33,11 +33,11 @@ export default {
       .sortBy('date', 'desc')
       .fetch()
 
-    const wpNews = await $axios.$get(`http://admin.uzdsmi-nf.uz/wp-json/wp/v2/posts?categories=2&_embed&per_page=3`)
+    const wpNews = await $axios.$get(`https://admin.uzdsmi-nf.uz/wp-json/wp/v2/posts?categories=2&_embed&per_page=3`)
 
     return {
       announcements,
-      news,
+      // news,
       articles,
       conferences,
       wpNews
