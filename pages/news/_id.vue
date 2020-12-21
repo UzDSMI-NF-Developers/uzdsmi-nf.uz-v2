@@ -23,7 +23,7 @@
     async asyncData ({ $axios, params, app }) {
       const { id } = params
       const { locale } = app.i18n
-      const post = await $axios.$get(`https://admin.uzdsmi-nf.uz//wp-json/wp/v2/posts/${id}`)
+      const post = await $axios.$get(`https://admin.uzdsmi-nf.uz/wp-json/wp/v2/posts/${id}`)
 
       return {
         post
