@@ -2,7 +2,7 @@
   <main>
     <HomeSlider />
     <HomeNews :posts="wpNews" />
-    <HomeAnnouncements :posts="announcements" />
+    <HomeAnnouncements :posts="wpAnnouncements" />
     <HomeArticles :posts="articles" />
     <HomeConferences :posts="conferences" />
     <HomeServices />
@@ -16,10 +16,10 @@ export default {
   async asyncData({ $content, $axios, app }) {
     const { locale } = app.i18n
 
-    const announcements = await $content(`${locale}/announcements`)
+    /*const announcements = await $content(`${locale}/announcements`)
       .limit(3)
       .sortBy('date', 'desc')
-      .fetch()
+      .fetch()*/
     /*const news = await $content(`${locale}/news`)
       .limit(3)
       .sortBy('date', 'desc')
@@ -34,13 +34,15 @@ export default {
       .fetch()
 
     const wpNews = await $axios.$get(`https://admin.uzdsmi-nf.uz/wp-json/wp/v2/posts?categories=2&_embed&per_page=3`)
+    const wpAnnouncements = await $axios.$get(`https://admin.uzdsmi-nf.uz/wp-json/wp/v2/posts?categories=3&_embed&per_page=3`)
 
     return {
-      announcements,
+      // announcements,
       // news,
       articles,
       conferences,
-      wpNews
+      wpNews,
+      wpAnnouncements
     }
   },
 }

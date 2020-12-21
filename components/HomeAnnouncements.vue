@@ -24,12 +24,11 @@
                 </span>
               </div>
               <div class="flex-grow pl-6">
-                <h3 class="title-font text-xl font-medium text-gray-900 mb-3 hover:underline">
-                  {{ post.title }}
-                </h3>
-                <p class="leading-relaxed mb-5">
-                  {{ post.description }}
-                </p>
+                <h3
+                  class="title-font text-xl font-medium text-gray-900 mb-3 hover:underline"
+                  v-html="post.title.rendered"
+                ></h3>
+                <p class="leading-relaxed mb-5" v-html="post.excerpt.rendered"></p>
               </div>
             </div>
           </NuxtLink>
