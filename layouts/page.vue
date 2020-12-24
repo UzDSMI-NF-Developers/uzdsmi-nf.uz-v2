@@ -13,8 +13,8 @@
   </div>
 </template>
 
-<style>
-  .content {
-    min-height: 600px;
-  }
+<style lang="postcss">
+.content {
+  min-height: 600px;
+}
 </style>

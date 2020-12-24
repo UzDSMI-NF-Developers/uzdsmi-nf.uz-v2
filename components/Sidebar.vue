@@ -1,54 +1,68 @@
 <template>
   <div>
     <div>
-      <h3 class="sidebar-heading">{{ $t('news.latest') }}</h3>
+      <h3 class="sidebar-heading">{{ $t("news.latest") }}</h3>
       <ul class="pb-8 pl-2 space-y-3">
         <li>
-          <NuxtLink :to="localePath('/')" class="sidebar-link">First Link</NuxtLink>
+          <NuxtLink :to="localePath('/')" class="sidebar-link"
+            >First Link</NuxtLink
+          >
         </li>
-        <li><NuxtLink :to="localePath('/')" class="sidebar-link">Second Link</NuxtLink></li>
-        <li><NuxtLink :to="localePath('/')" class="sidebar-link">Third Link</NuxtLink></li>
-        <li><NuxtLink :to="localePath('/')" class="sidebar-link">Fourth Link</NuxtLink></li>
+        <li>
+          <NuxtLink :to="localePath('/')" class="sidebar-link"
+            >Second Link</NuxtLink
+          >
+        </li>
+        <li>
+          <NuxtLink :to="localePath('/')" class="sidebar-link"
+            >Third Link</NuxtLink
+          >
+        </li>
+        <li>
+          <NuxtLink :to="localePath('/')" class="sidebar-link"
+            >Fourth Link</NuxtLink
+          >
+        </li>
       </ul>
     </div>
     <div>
-      <h3 class="sidebar-heading">{{ $t('categories') }}</h3>
+      <h3 class="sidebar-heading">{{ $t("categories") }}</h3>
       <ul class="pb-8 pl-2 space-y-3">
         <li>
           <NuxtLink :to="localePath('/')" class="sidebar-link">
-            {{ $t('nav.branch.title') }}
+            {{ $t("nav.branch.title") }}
           </NuxtLink>
         </li>
         <li>
           <NuxtLink :to="localePath('/')" class="sidebar-link">
-            {{ $t('nav.activity.title') }}
+            {{ $t("nav.activity.title") }}
           </NuxtLink>
         </li>
         <li>
           <NuxtLink :to="localePath('/')" class="sidebar-link">
-            {{ $t('nav.applicants.title') }}
+            {{ $t("nav.applicants.title") }}
           </NuxtLink>
         </li>
         <li>
           <NuxtLink :to="localePath('/')" class="sidebar-link">
-            {{ $t('nav.students.title') }}
+            {{ $t("nav.students.title") }}
           </NuxtLink>
         </li>
         <li>
           <NuxtLink :to="localePath('/')" class="sidebar-link">
-            {{ $t('nav.interactive_services.title') }}
+            {{ $t("nav.interactive_services.title") }}
           </NuxtLink>
         </li>
         <li>
           <NuxtLink :to="localePath('/')" class="sidebar-link">
-            {{ $t('nav.normative_legal_documents.title') }}
+            {{ $t("nav.normative_legal_documents.title") }}
           </NuxtLink>
         </li>
       </ul>
     </div>
     <div>
       <h3 class="sidebar-heading">
-        {{ $t('sidebar.calendar') }}
+        {{ $t("sidebar.calendar") }}
       </h3>
       <div class="my-4">
         <v-calendar :attributes="calendarAttrs" is-expanded />
@@ -56,7 +70,7 @@
     </div>
     <div>
       <h3 class="sidebar-heading">
-        {{ $t('sidebar.national_flag') }}
+        {{ $t("sidebar.national_flag") }}
       </h3>
       <ul class="pb-8 pl-2 space-y-3">
         <li>
@@ -72,7 +86,7 @@
     </div>
     <div>
       <h3 class="sidebar-heading">
-        {{ $t('sidebar.national_symbolics') }}
+        {{ $t("sidebar.national_symbolics") }}
       </h3>
       <ul class="pb-8 pl-2 space-y-3">
         <li>
@@ -88,12 +102,16 @@
     </div>
     <div>
       <h3 class="sidebar-heading">
-        {{ $t('sidebar.national_anthem') }}
+        {{ $t("sidebar.national_anthem") }}
       </h3>
       <ul class="pb-8 pl-2 space-y-3">
         <li>
           <NuxtLink :to="localePath('/page/340569')">
-            <img src="/note.png" alt="National anthem of Uzbekistan" class="w-24 mx-auto" />
+            <img
+              src="/note.png"
+              alt="National anthem of Uzbekistan"
+              class="w-24 mx-auto"
+            />
           </NuxtLink>
         </li>
       </ul>
@@ -107,14 +125,14 @@ export default {
     return {
       calendarAttrs: [
         {
-          key: 'today',
-          highlight: 'teal',
-          dates: new Date(),
-        },
-      ],
-    }
-  },
-}
+          key: "today",
+          highlight: "teal",
+          dates: new Date()
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style lang="postcss" scoped>
@@ -125,7 +143,7 @@ export default {
 .sidebar-link {
   @apply block transition-colors duration-200 ease-in;
   &:hover {
-    @apply text-primary;
+    @apply text-primary-50;
   }
 }
 </style>
