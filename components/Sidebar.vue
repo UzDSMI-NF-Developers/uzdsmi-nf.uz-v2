@@ -143,7 +143,7 @@ export default {
 .sidebar-link {
   @apply block transition-colors duration-200 ease-in;
   &:hover {
-    @apply text-primary-50;
+    @apply text-primary;
   }
 }
 </style>
