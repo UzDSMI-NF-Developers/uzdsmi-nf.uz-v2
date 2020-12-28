@@ -3,8 +3,8 @@
     <HomeSlider />
     <HomeNews :posts="wpNews" />
     <HomeAnnouncements :posts="wpAnnouncements" />
-    <HomeArticles :posts="articles" />
-    <HomeConferences :posts="conferences" />
+    <HomeArticles :posts="wpArticles" />
+    <HomeConferences :posts="wpConferences" />
     <HomeServices />
     <HomePresident />
     <HomeResources />
@@ -13,36 +13,17 @@
 
 <script>
 export default {
-  async asyncData({ $content, $axios, app }) {
-    const { locale } = app.i18n
-
-    /*const announcements = await $content(`${locale}/announcements`)
-      .limit(3)
-      .sortBy('date', 'desc')
-      .fetch()*/
-    /*const news = await $content(`${locale}/news`)
-      .limit(3)
-      .sortBy('date', 'desc')
-      .fetch()*/
-    const articles = await $content(`${locale}/articles`)
-      .limit(2)
-      .sortBy('date', 'desc')
-      .fetch()
-    const conferences = await $content(`${locale}/conferences`)
-      .limit(3)
-      .sortBy('date', 'desc')
-      .fetch()
-
+  async asyncData({ $axios }) {
     const wpNews = await $axios.$get(`https://admin.uzdsmi-nf.uz/wp-json/wp/v2/posts?categories=2&_embed&per_page=3`)
     const wpAnnouncements = await $axios.$get(`https://admin.uzdsmi-nf.uz/wp-json/wp/v2/posts?categories=3&_embed&per_page=3`)
+    const wpArticles = await $axios.$get(`https://admin.uzdsmi-nf.uz/wp-json/wp/v2/posts?categories=4&_embed&per_page=4`)
+    const wpConferences = await $axios.$get(`https://admin.uzdsmi-nf.uz/wp-json/wp/v2/posts?categories=5&_embed&per_page=6`)
 
     return {
-      // announcements,
-      // news,
-      articles,
-      conferences,
       wpNews,
-      wpAnnouncements
+      wpAnnouncements,
+      wpArticles,
+      wpConferences,
     }
   },
 }

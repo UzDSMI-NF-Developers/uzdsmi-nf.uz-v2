@@ -17,9 +17,10 @@
             >
               <span class="text-lg font-bold">{{ i + 1 }}</span>
             </div>
-            <h2 class="text-lg text-gray-900 font-medium title-font mb-2">
-              {{ post.title }}
-            </h2>
+            <h2
+              v-html="post.title.rendered"
+              class="text-lg text-gray-900 font-medium title-font mb-2"
+            ></h2>
             <p class="leading-relaxed text-base">
               {{ $dateFns.format(post.date, 'eeee, d MMMM, y') }}
             </p>
