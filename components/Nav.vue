@@ -55,6 +55,9 @@
             <NavLink :to="localePath('/page/336080')">
               {{ $t('nav.branch.faculties.folk_art_culture') }}
             </NavLink>
+            <NavLink :to="localePath('/page/798097')">
+              {{ $t('nav.branch.faculties.culture_and_library_activities') }}
+            </NavLink>
           </NavDropdown>
           <NavDropdown :title="$t('nav.branch.center_and_divisions.title')">
             <NavLink :to="localePath('/page/256927')">
