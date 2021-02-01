@@ -35,7 +35,7 @@
     <div class="flex py-1 md:py-0">
       <ul class="px-3">
         <li class="text-blue-500 font-semibold text-lg hover:underline">
-          <a href="tel:+998612241410">998-61-224-14-10</a>
+          <a href="tel:+998612241410">998-61-224-29-02</a>
         </li>
         <li class="text-blue-500 font-semibold text-lg hover:underline">
           <a href="tel:+998977889455">998-97-788-94-55</a>
