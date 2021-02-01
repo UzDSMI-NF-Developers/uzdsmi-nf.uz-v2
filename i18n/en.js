@@ -28,7 +28,8 @@ export default {
         directing_and_acting_skills: 'Directing and acting skills',
         social_and_humanities_sciences: 'Social and humanities sciences',
         texnogen: 'Texnogen and the art of dramaturgy',
-        folk_art_culture: 'Folk art culture and library activities',
+        folk_art_culture: 'Folk art',
+        culture_and_library_activities: 'Culture and library activities',
       },
       center_and_divisions: {
         title: 'Center and divisions',

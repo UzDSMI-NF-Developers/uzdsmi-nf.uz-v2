@@ -28,7 +28,8 @@ export default {
         directing_and_acting_skills: 'Rejissura va aktyor mahorati',
         social_and_humanities_sciences: 'Ijtimoiy gumanitar fanlar',
         texnogen: "Texnogen va dramaturgiya san'ati",
-        folk_art_culture: 'Xalq ijodiyoti, madaniyat va kutubxona faoliyati',
+        folk_art_culture: 'Xalq ijodiyoti',
+        culture_and_library_activities: 'Madaniyat va kutubxona faoliyati',
       },
       center_and_divisions: {
         title: "Markaz va bo'limlar",

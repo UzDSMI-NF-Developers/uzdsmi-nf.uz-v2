@@ -28,7 +28,8 @@ export default {
         directing_and_acting_skills: 'Режиссерское и актерское мастерство',
         social_and_humanities_sciences: 'Социальные и гуманитарные науки',
         texnogen: 'Техноген и искусство драматургии',
-        folk_art_culture: 'Народно-художественная культура и библиотечная деятельность',
+        folk_art_culture: 'Народное искусство',
+        culture_and_library_activities: 'Культура и библиотечная деятельность',
       },
       center_and_divisions: {
         title: 'Центр и подразделения',
