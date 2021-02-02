@@ -119,14 +119,6 @@
 
         <!-- Activity -->
         <NavDropdown :title="$t('nav.activity.title')">
-          <NavDropdown :title="$t('nav.activity.scientific_activity')">
-            <NavLink :to="localePath('/page/416826')">
-              {{ $t('nav.activity.scientific_council') }}
-            </NavLink>
-            <NavLink :to="localePath('/page/738883')">
-              {{ $t('nav.activity.collection_of_documents_on_scientific_research') }}
-            </NavLink>
-          </NavDropdown>
           <NavDropdown :title="$t('nav.activity.financial_activity')">
             <NavLink :to="localePath('/page/407020')">
               {{ $t('nav.activity.alumni_monitoring') }}
